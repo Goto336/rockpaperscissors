@@ -11,3 +11,19 @@
 p{
   font-size: 30px;
 }
+
+
+#shoot{
+   border: groove 4px red;
+    border-radius:10px;
+    background-color: lightblue;
+}
+
+.options{
+    height: 40px;
+    border-radius: 5px;
+    border: groove 4px red;
+    background-color: white;
+    font-family: 'Ceviche One', cursive;
+    font-size: 20px;
+}

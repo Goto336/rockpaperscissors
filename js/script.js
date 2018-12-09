@@ -9,27 +9,74 @@
 
 // DOCUMENT READY FUNCTION BELOW
 
-var userChoice;
-
-var computerChoice;
-
-var winner;
-
-var randomNumber = 0;
-
-$("#shoot").click(function(){
-   userChoice = $("#input").val(); 
-    randomNumber = Math.random();  
-   
-   if (randomNumber < .33 ) {
-      computerChoice = "rock"
-     // else if (randomNumber < .66)
-         
-      
+$("#shoot").click(function() { 
+    var userChoice = $("#input").val();
+    $("#userChoice").text(userChoice);
+    var randomChoice = Math.random();
+    
+    if(randomChoice<.33){
+        var computerChoice="scissors"
+    }
+    else if(randomChoice<666){
+        var computerChoice="paper"
+    
+    }
+   else{ 
+       var computerChoice="rock"
+    }
+    
+    $("#computerChoice").text(computerChoice);
+     
+    if(userChoice=== "rock" && computerChoice=== "rock"){
+        winner="tie";
+}
+ else if (userChoice==="rock" && computerChoice==="paper"){
+     winner="computer";
+ }
+   else if (userChoice==="rock" && computerChoice==="scissors"){
+       winner="user";
    }
-   computerChoice = $("#input").val(); 
+   
+   else if (userChoice==="paper"&& computerChoice==="rock"){
+       winner="user";
+   }
+    else if (userChoice==="paper" && computerChoice==="paper"){
+        winner="tie";
+    }
+   
+  else if(userChoice==="paper"&& computerChoice==="scissors"){
+      winner="computer";
+  }
+else if (userChoice==="scissors"&& computerChoice==="rock"){
+    winner="computer";
+}
+   else if (userChoice==="scissors"&& computerChoice==="paper"){
+    winner="user";
+}
+else if (userChoice==="scissors"&& computerChoice==="scissors"){
+    winner="tie";
+}
+   
+ $("#result").text(winner);
+ 
+ $("#input").text("empty"); 
    
    
-   winner = $("#input").val(); 
    
+   
+   
+    
+});
+ 
+
+var winner= ""; 
+var userChoice="";
+var computerChoice="";
+
+
+
+
+$("select.options").change(function(){
+    var change = $(this).children("option:selected").val();
+     $("body").css("background-color","lightblue");
 });
