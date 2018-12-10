@@ -9,6 +9,12 @@
 
 // DOCUMENT READY FUNCTION BELOW
 
+var winner= ""; 
+var userChoice="";
+var computerChoice="";
+
+
+
 $("#shoot").click(function() { 
     var userChoice = $("#input").val();
     $("#userChoice").text(userChoice);
@@ -28,33 +34,33 @@ $("#shoot").click(function() {
     $("#computerChoice").text(computerChoice);
      
     if(userChoice=== "rock" && computerChoice=== "rock"){
-        winner="tie";
+        winner="Tie?";
 }
  else if (userChoice==="rock" && computerChoice==="paper"){
-     winner="computer";
+     winner="Computer!";
  }
    else if (userChoice==="rock" && computerChoice==="scissors"){
-       winner="user";
+       winner="USER WINS!!!";
    }
    
    else if (userChoice==="paper"&& computerChoice==="rock"){
-       winner="user";
+       winner="USER WIN!!!";
    }
     else if (userChoice==="paper" && computerChoice==="paper"){
-        winner="tie";
+        winner="Tie?";
     }
    
   else if(userChoice==="paper"&& computerChoice==="scissors"){
-      winner="computer";
+      winner="Computer!";
   }
 else if (userChoice==="scissors"&& computerChoice==="rock"){
-    winner="computer";
+    winner="Computer!";
 }
    else if (userChoice==="scissors"&& computerChoice==="paper"){
-    winner="user";
+    winner="USER WINS!!!";
 }
 else if (userChoice==="scissors"&& computerChoice==="scissors"){
-    winner="tie";
+    winner="Tie?";
 }
    
  $("#result").text(winner);
@@ -63,15 +69,8 @@ else if (userChoice==="scissors"&& computerChoice==="scissors"){
    
    
    
-   
-   
-    
 });
  
-
-var winner= ""; 
-var userChoice="";
-var computerChoice="";
 
 
 
