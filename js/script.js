@@ -23,7 +23,7 @@ $("#shoot").click(function() {
     if(randomChoice<.33){
         var computerChoice="scissors"
     }
-    else if(randomChoice<666){
+    else if(randomChoice<.66){
         var computerChoice="paper"
     
     }
@@ -35,10 +35,10 @@ $("#shoot").click(function() {
      
     if(userChoice=== "rock" && computerChoice=== "rock"){
         winner="Tie?";
-}
- else if (userChoice==="rock" && computerChoice==="paper"){
+    }
+  else if (userChoice==="rock" && computerChoice==="paper"){
      winner="Computer!";
- }
+     }
    else if (userChoice==="rock" && computerChoice==="scissors"){
        winner="USER WINS!!!";
    }
@@ -50,25 +50,23 @@ $("#shoot").click(function() {
         winner="Tie?";
     }
    
-  else if(userChoice==="paper"&& computerChoice==="scissors"){
+  else if(userChoice === "paper" && computerChoice === "scissors"){
       winner="Computer!";
-  }
-else if (userChoice==="scissors"&& computerChoice==="rock"){
-    winner="Computer!";
-}
+   }
+    else if (userChoice === "scissors" && computerChoice ==="rock"){
+    winner= "Computer!";
+    }
    else if (userChoice==="scissors"&& computerChoice==="paper"){
     winner="USER WINS!!!";
-}
-else if (userChoice==="scissors"&& computerChoice==="scissors"){
+    }
+    else if (userChoice==="scissors"&& computerChoice==="scissors"){
     winner="Tie?";
-}
+    }
    
- $("#result").text(winner);
+    $("#result").text(winner);
  
- $("#input").text("empty"); 
-   
-   
-   
+    $("#input").text("empty"); 
+    
 });
  
 

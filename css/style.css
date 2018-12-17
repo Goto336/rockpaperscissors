@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+
 .row{
   text-align:center;
   
@@ -6,6 +10,11 @@
   display:flex;
   justify-content:space-between;
   
+}
+
+#rps{
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 50px;
 }
 
 p{
@@ -19,6 +28,16 @@ p{
     background-color: lightblue;
 }
 
+#userChoice{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 40px;
+}
+
+#computerChoice{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 40px;
+}
+
 .options{
     height: 40px;
     border-radius: 5px;
@@ -26,4 +45,9 @@ p{
     background-color: white;
     font-family: 'Ceviche One', cursive;
     font-size: 20px;
+}
+
+#result{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 40px;
 }
